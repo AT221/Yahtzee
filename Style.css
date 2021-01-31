@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header{
+    background-color: #000000;
+    height: 80px;
+    width: 100%;
+    display: block;
+    color: #f0f8ff;
+}
+
+.inner-header{
+    height: 100%;
+    margin: 0 auto;
+    width: 90%;
+    display: block;
+}
+
+.logo-container{
+    height: 100%;
+    float: left;
+    display: table;
+}
+
+.logo-container h1{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.navigation{
+    float: right;
+    height: 100%;
+}
+
+
+.navigation a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+  
+}
+
+.button_container{
+    text-align: center;
+    display: block;
+}
+
+.roll{
+    width: 110px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.roll_Count_Button_Container{
+  text-align: center;
+  margin-right: 8%;
+  padding-bottom: 1.5%;
+  position: relative;
+}
+
+.player_Text{
+    font-size: 28px;
+    margin: 0 auto;
+    
+}
+.player_Text2{
+    font-size: 28px;
+    margin-left: 10%;
+    padding-top: 1.5%;
+    
+}
+
+table{
+    table-layout: fixed;
+    border-radius: 10px;
+    border-spacing: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.692);
+    background-color: #FCBF49;
+    font-family: 'Castoro', serif;
+    font-size: 12px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+    border-bottom: 5px solid #000000;
+}
+
+th, td{
+    border: 2px solid #000000;
+    text-align: center;
+    padding: 2px;
+    max-width: 210px; 
+}
+
+.sum_table{
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: 0 auto;
+    border: 5px solid #000000;
+}
+
+.sum_table th, td{
+    padding: 15px;
+}
+
+.sum_table tr td{
+    color:#585757; 
+    background-color:#E8E8E8;
+    width: fit-content;
+}
+
+.hide_cell{
+    background-color: #FCBF49;
+    border: 0;
+}
+
+
+.whole{
+   display: inline-flex;
+   flex-wrap: wrap;
+   width: 100%;
+   text-align: center;
+   margin-top: 160px;
+   margin-bottom: 160px;
+   white-space: normal;
+   font-size: 12px;
+}
+
+.whole th{
+    overflow-wrap:break-word;
+}
+
+.final_total{
+    margin-top: 7%;
+}
+
+table tbody tr:nth-child(odd), table tfoot tr:nth-child(odd){ 
+    background-color:#ec5a5a;
+}
+
+table tbody tr:nth-child(even), table tfoot tr:nth-child(even){
+    color:#585757; 
+    background-color:#E8E8E8;
+}
+
+table thead tr{
+    background-color: #FAF4D3;
+}
+
+.upper_table{
+    margin-bottom: 7%;
+}
+
+.checkbox{
+    width: 25px;
+    height: 15px;
+}
+
+.clear{
+    width: 250px;
+    font-size: 17px;
+    
+}
+
+select{
+    width:100%;
+    height: 30px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+
+.imgButton button{
+    text-align:center;
+    width: 50px;
+}
+
+.dice_table tr{
+    background-color: #FFFFFF !important;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.dice_table td{
+    background-color: #FFFFFF !important;
+     border-style: hidden; 
+    padding: 5px 50px;
+}
+.dice_table {
+    border : 0;
+    border-bottom : 0;
+    background-color: #FFFFFF !important;
+    border-collapse: separate;
+    box-shadow : none;
+    margin-bottom: 50px;
+}
+
+
+#rollCount{
+    margin-left: 10%;
+    
+}
+
+.dropSum{
+    max-width: 60px;
+}
+
+.lower_table select{
+    max-width: 50px
+}

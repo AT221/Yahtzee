@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <link rel='preconnect' href='https://fonts.gstatic.com'>
+    <link href='https://fonts.googleapis.com/css2?family=Castoro&display=swap' rel='stylesheet'> 
+    <link href='./Style.css' rel='stylesheet'>
+    <title>Yahtzee !</title>
+</head>
+
+<body>
+    <div class='top_elements'>
+    <div class='header'>
+        <div class='inner-header'>
+            <div class='logo-container'>
+                <h1>Austin<span>Tyler</span></h4>
+            </div>
+                <ul class='navigation'>
+                 <a><li>Home</li></a>
+                 <a><li>About</li></a>
+                 <a><li>Contact</li></a>
+                </ul>
+        </div>   
+    </div>
+
+    <table class='dice_table'>
+        <tr>
+            <td>
+                <img id='die1' class='dice' src='https://img.icons8.com/windows/160/000000/dice-one.png'/>
+                <div class='imgButton'>
+                    <button class='keep_die1'>Keep</button>
+                </div>
+            </td>
+            <td>
+                <img id='die2' class='dice' src='https://img.icons8.com/windows/160/000000/dice-two.png'/>
+                <div class='imgButton'>
+                    <button class='keep_die2'>Keep</button>
+                </div>
+            </td>
+            <td>
+                <img id='die3' class='dice' src='https://img.icons8.com/windows/160/000000/dice-three.png'/>
+                <div class='imgButton'>
+                    <button class='keep_die3'>Keep</button>
+                </div>
+            </td>
+            <td>
+                <img id='die4' class='dice' src='https://img.icons8.com/windows/160/000000/dice-four.png'/>
+                <div class='imgButton'>
+                    <button class='keep_die4'>Keep</button>
+                </div>
+            </td>
+            <td>
+                <img id='die5' class='dice' src='https://img.icons8.com/windows/160/000000/dice-five.png'/>
+                <div class='imgButton'>
+                    <button class='keep_die5'>Keep</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class='button_container'>
+        <button class='roll'>Roll!</button>
+    </div>
+    <div class='roll_Count_Button_Container'>
+        <h2 id='rollCount' class='player_Text'></h2>
+        <h2 id='nextPlayer' class='player_Text2'></h2>
+    </div>
+    <div class='button_container'>   
+        <button class='roll' id='pass'>Pass Turn!</button>
+    </div>
+
+    <table class='sum_table'>
+        <thead>
+        <tr>
+            <th scope='row'>Sum Of Ones</th>
+            <th scope='row'>Sum Of Twos</th>
+            <th scope='row'>Sum Of Threes</th>
+            <th scope='row'>Sum Of Fours</th>
+            <th scope='row'>Sum Of Fives</th>
+            <th scope='row'>Sum Of Sixs</th>
+            <th scope='row'>Sum Of Dice Roll</th>
+        </tr>
+        <tr>
+            <td id ='onesTotal'></td>
+            <td id ='twosTotal'></td>
+            <td id='threesTotal'></td>
+            <td id='foursTotal'></td>
+            <td id='fivesTotal'></td>
+            <td id='sixesTotal'></td>
+            <td id='total'></td>
+        </tr>
+        </thead>
+    </table>
+
+<div class='whole'>
+    <table class='upper_table'>
+    <thead>
+        <tr>
+            <th scope='col'> Upper Section</th>
+            <th class='hide_cell'></th>
+            <th scope='col'>Player 1</th>
+            <th scope='col'>Player 2</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <th scope ='row'>Aces = 1</th>
+            <td>Count and Add Only Aces</td>
+            <td>
+                <select autocomplete='off' list='ones' id='oneP1' class= 'scoreBox'  name='onesP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                </select>
+            </td>
+            <td>
+                <select autocomplete='off' list='ones' id='oneP2'  class= 'scoreBox' name='oneP2'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th scope ='row'>Twos = 2</th>
+            <td>Count and Add Only Twos</td>
+            <td>
+                <select autocomplete='off' list='twos' id='twoP1' class= 'scoreBox'  name='twoP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='2'>2</option>
+                    <option value='4'>4</option>
+                    <option value='6'>6</option>
+                    <option value='8'>8</option>
+                    <option value='10'>10</option>
+                </select>
+            </td>
+            <td>
+                <select autocomplete='off' list='twos' id='twoP2' class= 'scoreBox' name='twoP2'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='2'>2</option>
+                    <option value='4'>4</option>
+                    <option value='6'>6</option>
+                    <option value='8'>8</option>
+                    <option value='10'>10</option>
+                </select>    
+            </td>
+        </tr>
+        <tr>
+            <th scope ='row'>Threes = 3</th>
+            <td>Count and Add Only Threes</td>
+            <td>
+                <select autocomplete='off' list ='threes' id = 'threeP1' class= 'scoreBox' name ='threeP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='3'>3</option>
+                    <option value='6'>6</option>
+                    <option value='9'>9</option>
+                    <option value='12'>12</option>
+                    <option value='15'>15</option>
+                </select>
+            </td>
+            <td>
+                <select autocomplete='off' list ='threes' id = 'threeP2' class= 'scoreBox' name ='threeP2'>
+                    <option value= '0'> </option>
+                    <option value='0'>0</option>
+                    <option value='3'>3</option>
+                    <option value='6'>6</option>
+                    <option value='9'>9</option>
+                    <option value='12'>12</option>
+                    <option value='15'>15</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th scope ='row'>Fours = 4</th>
+            <td>Count and Add Only Fours</td>
+            <td>
+                <select autocomplete='off' list='fours' id='fourP1' class= 'scoreBox' name='fourP1' >
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='4'>4</option>
+                    <option value='8'>8</option>
+                    <option value='12'>12</option>
+                    <option value='16'>16</option>
+                    <option value='20'>20</option>
+                </select>
+            </td>
+            <td>
+                <select autocomplete='off' list='fours' id='fourP2' class= 'scoreBox' name='fourP2' >
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='4'>4</option>
+                    <option value='8'>8</option>
+                    <option value='12'>12</option>
+                    <option value='16'>16</option>
+                    <option value='20'>20</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th scope ='row'>Fives = 5</th>
+            <td>Count and Add Only Fives</td>
+            <td>
+                <select autocomplete='off' list='fives' id='fiveP1' class= 'scoreBox' name='fiveP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='5'>5</option>
+                    <option value='10'>10</option>
+                    <option value='15'>15</option>
+                    <option value='20'>20</option>
+                    <option value='25'>25</option>
+                </select>
+            </td>
+            <td>
+                <select autocomplete='off' list='fives' id='fiveP2' class= 'scoreBox' name='fiveP2'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='5'>5</option>
+                    <option value='10'>10</option>
+                    <option value='15'>15</option>
+                    <option value='20'>20</option>
+                    <option value='25'>25</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th scope ='row'>Sixes = 6</th>
+            <td>Count and Add Only Sixes</td>
+            <td>
+                <select autocomplete='off' list='sixes' id='sixP1' class= 'scoreBox' name='sixP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='6'>6</option>
+                    <option value='12'>12</option>
+                    <option value='18'>18</option>
+                    <option value='24'>24</option>
+                    <option value='30'>30</option>
+                </select>
+            </td>
+            <td>
+                <select autocomplete='off' list='sixes' id='sixP2' class= 'scoreBox' name='sixP2'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='6'>6</option>
+                    <option value='12'>12</option>
+                    <option value='18'>18</option>
+                    <option value='24'>24</option>
+                    <option value='30'>30</option>
+                </select>
+            </td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <th scope ='row'>Total Score</th>
+            <td class='hide_cell'></td>
+            <td id='p1Total'></td>
+            <td id='p2Total'></td>
+        </tr>
+        <tr>
+            <th scope ='row'>Total Bonus If Total Score is 63 or Over</th>
+            <td>Add 35</td> 
+            <td id='add35P1'></td>
+            <td id='add35P2'></td>
+        </tr>
+        <tr>
+            <th scope ='row'>Total Score Of Upper</th>
+            <td class='hide_cell'></td>
+            <td id='totalUpperP1' value='35'></td>
+            <td id='totalUpperP2'></td>
+        </tr>
+    </tfoot>
+    </table>
+    <table class='lower_table'>
+    <thead>
+        <tr>
+            <th scpope='col'>Lower Section</th>
+            <th class='hide_cell'></th>
+            <th scpope='col'>Player 1</th>
+            <th scope='col'>Player 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope='row'>3 of a Kind</th>
+            <td> Add Total Of All Dice</td>
+            <td>
+            <form>
+                <select autocomplete='off' id='threeOfP1'  class ='scoreBox dropSum' list='' name='threeOfP1'>
+                    <option  value='0'> </option>
+                    <option  value='0'>0</option>
+                    <option id='threeOfP1_Sum' class='dropSum'>Click To Add Sum</option>
+                </select>
+            </form>
+            </td>
+            <td>
+            <form>
+                <select autocomplete='off' id='threeOfP2' class ='scoreBox dropSum' list='' name='threeOfP2'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option id='threeOfP2_Sum' class='dropSum'> Click To Add Sum</option>
+                </select>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <th scope='row'>4 of a Kind</th>
+            <td> Add Total Of All Dice</td>
+            <td>
+            <form>
+                <select autocomplete='off' id='fourOfP1' class ='scoreBox dropSum' list=' name='fourOfP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option id='fourOfP1_Sum' class='dropSum'>Click To Add Sum</option>
+                </select>
+            </form>
+            </td>
+            <td>
+            <form>
+                <select autocomplete='off' id='fourOfP2' class ='scoreBox dropSum' list=' name='fourOfP2'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option id='fourOfP2_Sum' class='dropSum'>Click To Add Sum</option>
+                </select>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <th scope='row'>Full House</th>
+            <td> Score 25</td>
+            <td>
+            <form>
+                <select autocomplete='off' id='full_houseP1' class ='scoreBox' list='full_house' name='full_house_numP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='25'>25</option>
+                </select>
+            </form>
+            </td>
+            <td>
+            <form>
+                <select autocomplete='off' id='full_houseP2' class ='scoreBox'  list='full_house' name='full_house_numP2'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='25'>25</option>
+                </select>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <th scope='row'>Sm. Straight (Sequence of 4)</th>
+            <td>Score 30</td>
+            <td>
+            <form>
+                <select autocomplete='off' id='sm_straightP1' class ='scoreBox' list='sm_straight' name='sm_straight_numP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='30'>30</option>
+                </select>
+            </form>
+            </td>
+            <td>
+            <form>
+                <select autocomplete='off' id='sm_straightP2' class ='scoreBox'  list='sm_straight' name='sm_straight_numP2'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='30'>30</option>
+                </select>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <th scope='row'>Lg. Straight (Sequence of 5)</th>
+            <td> Score 40</td>
+            <td>
+            <form>
+                <select autocomplete='off' id='lg_straightP1' class ='scoreBox' list='lg_straight' name='lg_straight_numP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option value='40'>40</option>
+                </datalist>
+            </form>
+            </td>
+            <td>
+            <form>
+                <select autocomplete='off' id='lg_straightP2' class ='scoreBox'  list='lg_straight' name='lg_straight_numP2'>
+                    <option value= '0'> </option>
+                    <option value='0'>0</option>
+                    <option value='40'>40</option>
+                </datalist>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <th scope='row'>Yahtzee (5 Of A Kind)</th>
+            <td> Score 50</td>
+            <td>
+            <form>
+                <select autocomplete='off' id='yahtzeeP1' class ='scoreBox' list='yahtzee' name='yahtzee_numP1'>
+                    <option value= '0'> </option>
+                    <option value='0'>0</option>
+                    <option value='50'>50</option>
+                </select>
+            </form>
+            </td>
+            <td>
+            <form>
+                <select autocomplete='off' id='yahtzeeP2' class ='scoreBox'  list='yahtzee' name='yahtzee_numP2'>
+                    <option value= '0'> </option>
+                    <option value='0'>0</option>
+                    <option value='50'>50</option>
+                </select>
+            </form>
+            </td>
+            </tr>
+        <tr>
+            <th scope='row'>Chance</th>
+            <td> Add Total Of All Dice</td>
+            <td>
+            <form>
+                <select autocomplete='off' id='chanceP1' class ='scoreBox dropSum'  list='' name='chanceP1'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option id='chanceP1_Sum' >Click To Add Sum</option>
+                </select>
+            </form>
+            </td>
+            <td>
+            <form>
+                <select autocomplete='off' id='chanceP2' class ='scoreBox dropSum'  list='' name='chanceP2'>
+                    <option value='0'> </option>
+                    <option value='0'>0</option>
+                    <option id='chanceP2_Sum' >Click To Add Sum</option>
+                </select>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <th scope='row'>Yahtzee Bonus</th>
+            <td> Check For Each Bonus</td>
+            <td> 
+            <form>
+                <input autocomplete='off' id='checkBoxOneP1' class ='scoreBox checkbox'value='0' name='checkBoxOneP1' type='checkbox'>
+        <br>
+                <input autocomplete='off' id='checkBoxTwoP1' class ='scoreBox checkbox' value='0' ame='checkBoxTwoP1' type='checkbox'>
+                <input autocomplete='off' id='checkBoxThreeP1' class ='scoreBox checkbox' value='0' name='checkBoxThreeP1' type='checkbox'>
+            </form>
+            </td>
+            <td>
+            <form>
+                <input autocomplete='off' id='checkBoxOneP2' class ='scoreBox checkbox' value='0' name='checkBoxOneP2' type='checkbox'>
+        <br>
+                <input autocomplete='off' id='checkBoxTwoP2' class ='scoreBox checkbox' value='0' name='checkBoxTwoP2' type='checkbox'>
+                <input autocomplete='off' id='checkBoxThreeP2' class ='scoreBox checkbox' value='0' name='checkBoxThreeP2' type='checkbox'>
+            </form>
+            </td>   
+            <tr></tr>
+            <th class='hide_cell'></th>
+            <td scope='row'>Score 100 Per</td>
+            <td id='bonusP1' ></td>
+            <td id ='bonusP2'></td>
+        </tr>
+    </tbody>    
+    </table>
+
+<br>
+<!-- Check the bottom out from here-->
+<table class='final_total'>
+    <thead>
+        <tr>
+        <th scope='col'>Total Scores</th>
+        <th scope='col' id='playerOne' >Player 1</th>
+        <th scope='col' id='playerTwo'>Player 2</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope='row'>Total of Upper Section</th>
+        <td id='finalTotalUpperP1'></td>
+        <td id='finalTotalUpperP2'></td>
+    </tr>
+    <tr>
+        <th scope='row'>Total of Lower Section</th>
+        <td id='finalTotalLowerP1'></td>
+        <td id='finalTotalLowerP2'></td>
+    </tr>
+    <tr>
+        <th scope='row'>Final Score:</th>
+        <td id='finalP1'></td>
+        <td id=finalP2></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td class='hide_cell'></td>
+        <th class='hide_cell'></th>
+        <td class='hide_cell'></td>
+    </tr>
+    <tr class='clear_container'>
+        <th colspan='3'><button class='clear' onClick='window.location.reload()' >Clear Board</button></th>
+    </tr>
+    </tfoot>
+    </table>   
+</div>
+
+<script src='./Yahtzee.js'></script>
+</body>
+</html>
