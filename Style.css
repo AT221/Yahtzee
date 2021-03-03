@@ -70,6 +70,7 @@
 .button_container{
     text-align: center;
     display: block;
+    margin-left: 3%;
 }
 
 .roll{
@@ -87,12 +88,11 @@
 
 .player_Text{
     font-size: 28px;
-    margin: 0 auto;
-    
+    width: 92%;
 }
 .player_Text2{
     font-size: 28px;
-    margin-left: 10%;
+    margin-left: 13%;
     padding-top: 1.5%;
     
 }
@@ -121,7 +121,7 @@ th, td{
 .sum_table{
     border-collapse: separate;
     border-spacing: 10px;
-    margin: 0 auto;
+    margin-left: 24.5%;
     border: 5px solid #000000;
 }
 
@@ -201,6 +201,7 @@ select{
 
 
 .imgButton button{
+    margin-left: 50%;
     text-align:center;
     width: 50px;
 }
@@ -240,3 +241,12 @@ select{
 
 
 
+@media only screen and (min-width: 2500px){
+    .sum_table{
+    margin-left: 31.5%;
+    }
+    .imgButton button{
+        margin-left: 55%;
+    }
+
+}
