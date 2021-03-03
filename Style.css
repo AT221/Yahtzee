@@ -100,6 +100,7 @@ th, td{
     text-align: center;
     padding: 2px;
     max-width: 210px; 
+    width: 100px;
 }
 
 .sum_table{
@@ -130,8 +131,8 @@ th, td{
    flex-wrap: wrap;
    width: 100%;
    text-align: center;
-   margin-top: 160px;
-   margin-bottom: 160px;
+   margin-top: 140px;
+   margin-bottom: 140px;
    white-space: normal;
    font-size: 12px;
 }
@@ -141,8 +142,10 @@ th, td{
 }
 
 .final_total{
-    margin-top: 7%;
+height: 5%;
+margin-top: 160px;
 }
+
 
 table tbody tr:nth-child(odd), table tfoot tr:nth-child(odd){ 
     background-color:#ec5a5a;
@@ -209,7 +212,6 @@ select{
 
 #rollCount{
     margin-left: 10%;
-    
 }
 
 .dropSum{
@@ -219,3 +221,7 @@ select{
 .lower_table select{
     max-width: 50px
 }
+
+
+
+
