@@ -92,7 +92,7 @@
         <tr>
             <th scope ='row'>Aces = 1</th>
             <td>Count and Add Only Aces</td>
-            <td>
+            <td className='td_select'>
                 <select autocomplete='off' list='ones' id='oneP1' class= 'scoreBox'  name='onesP1'>
                     <option value='0'> </option>
                     <option value='0'>0</option>
@@ -462,41 +462,41 @@
 
 <br>
 <!-- Check the bottom out from here-->
-<table class='final_total'>
-    <thead>
+    <table class='final_total'>
+        <thead>
+            <tr>
+            <th scope='col'>Total Scores</th>
+            <th scope='col' id='playerOne' >Player 1</th>
+            <th scope='col' id='playerTwo'>Player 2</th>
+            </tr>
+        </thead>
+        <tbody>
         <tr>
-        <th scope='col'>Total Scores</th>
-        <th scope='col' id='playerOne' >Player 1</th>
-        <th scope='col' id='playerTwo'>Player 2</th>
+            <th scope='row'>Total of Upper Section</th>
+            <td id='finalTotalUpperP1'></td>
+            <td id='finalTotalUpperP2'></td>
         </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope='row'>Total of Upper Section</th>
-        <td id='finalTotalUpperP1'></td>
-        <td id='finalTotalUpperP2'></td>
-    </tr>
-    <tr>
-        <th scope='row'>Total of Lower Section</th>
-        <td id='finalTotalLowerP1'></td>
-        <td id='finalTotalLowerP2'></td>
-    </tr>
-    <tr>
-        <th scope='row'>Final Score:</th>
-        <td id='finalP1'></td>
-        <td id='finalP2'></td>
-    </tr>
-    </tbody>
-    <tfoot>
-    <tr>
-        <td class='hide_cell'></td>
-        <th class='hide_cell'></th>
-        <td class='hide_cell'></td>
-    </tr>
-    <tr class='clear_container'>
-        <th colspan='3'><button class='clear' onClick='window.location.reload()' >Clear Board</button></th>
-    </tr>
-    </tfoot>
+        <tr>
+            <th scope='row'>Total of Lower Section</th>
+            <td id='finalTotalLowerP1'></td>
+            <td id='finalTotalLowerP2'></td>
+        </tr>
+        <tr>
+            <th scope='row'>Final Score:</th>
+            <td id='finalP1'></td>
+            <td id='finalP2'></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td class='hide_cell'></td>
+            <th class='hide_cell'></th>
+            <td class='hide_cell'></td>
+        </tr>
+        <tr class='clear_container'>
+            <th colspan='3'><button class='clear' onClick='window.location.reload()' >Clear Board</button></th>
+        </tr>
+        </tfoot>
     </table>   
 
 <script src='./Yahtzee.js'></script>

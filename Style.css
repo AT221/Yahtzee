@@ -3,178 +3,146 @@
     margin: 0 auto;
     list-style: none;
     text-decoration: none;
+    font-family: 'Castoro', serif;
 }
 
+body{
+    width: 95%;
+}
 
-.button_container{
+.dice_table{
     text-align: center;
-    display: block;
-    margin-left: 3%;
+    padding-bottom: 6vh;
+    
+}
+.dice_table tr{
+    display: inline-flex;
+    flex-wrap: wrap;
+    
 }
 
-.roll{
-    width: 110px;
-    margin-bottom: 30px;
-    font-size: 20px;
+.dice_table td{
+    padding: 1vh 3vw;
+    border-style: hidden; 
+    background-color:  #ffffff;
+    
+}
+.button_container{
+      display: flex;
+  justify-content: center;
 }
 
 .roll_Count_Button_Container{
-  text-align: center;
-  margin-right: 8%;
-  padding-bottom: 1.5%;
-  position: relative;
+    width: 12vw;
+    text-align: center;
+    padding: 2vh 0;
+}
+
+.roll{
+    width: fit-content;
+    font-size: 20px;
+    padding: 0 1vw;
+    
+}
+#pass{
+    margin-bottom: 8vh;
 }
 
 .player_Text{
-    font-size: 28px;
-    width: 92%;
-}
-.player_Text2{
-    font-size: 28px;
-    margin-left: 13%;
-    padding-top: 1.5%;
-}
-
-table{
-    table-layout: fixed;
-    border-radius: 10px;
-    border-spacing: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.692);
-    background-color: #FCBF49;
-    font-family: 'Castoro', serif;
-    font-size: 12px;
-    border: 1px solid #000000;
-    margin: 0 auto;
-    border-bottom: 5px solid #000000;
-}
-
-th, td{
-    border: 2px solid #000000;
-    text-align: center;
-    padding: 2px;
-    max-width: 210px; 
-    width: 100px;
+    padding-bottom: 1vh;
 }
 
 .sum_table{
     border-collapse: separate;
     border-spacing: 10px;
     border: 5px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.692);
+    margin-bottom: 5vh;
+    text-align: center;
 }
 
+
 .sum_table th, td{
-    padding: 15px;
+    padding: .8vw;
+    overflow-wrap:break-word;
+}
+
+table{
+    font-size: 12px;
+}
+
+
+.whole{
+    margin: 14vh 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.upper_table, .lower_table, .final_total{
+    table-layout: fixed;
+    border-radius: 10px;
+    border-spacing: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.692);
+    border: 1px solid #000000;
+    border-bottom: 5px solid #000000;
+    margin-bottom: 8vh;
+    text-align: center;
+}
+
+select{
+    width: 3vw;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+    min-width: 5vw;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+th, td{
+    border: 2px solid #000000;
+    text-align: center;
+}
+
+.hide_cell{
+    background-color: #ffffff;
+    border: 0;
+}
+
+.clear{
+    width: 18.6vw;
+    font-size: 17px;
+}
+
+.upper_table tr :nth-child(3), .upper_table tr :nth-child(4){
+    border: none;
+    background-color:#ffffff
+}
+.lower_table tr :nth-child(3), .lower_table tr :nth-child(4){
+    border: none;
+    background-color:#ffffff
+}
+
+.upper_table  tr:nth-child(even), .upper_table tr:nth-child(even), .lower_table tr:nth-child(even), .lower_table  tr:nth-child(even), .final_total tr:nth-child(even), .sum_table tr:nth-child(even){
+    color:#585757; 
+    background-color:#E8E8E8;
+}
+.upper_table  tr:nth-child(odd), .upper_table tr:nth-child(odd), .lower_table tr:nth-child(odd), .lower_table  tr:nth-child(odd), .final_total  tr:nth-child(odd), .sum_table tr:nth-child(odd){
+    background-color:#8BBEB2;
 }
 
 .sum_table tr td{
     color:#585757; 
     background-color:#E8E8E8;
+}
+
+.final_total td, th{
     width: fit-content;
-}
-
-.hide_cell{
-    background-color: #FCBF49;
-    border: 0;
-}
-
-.whole{
-   display: inline-flex;
-   flex-wrap: wrap;
-   width: 100%;
-   text-align: center;
-   margin-top: 140px;
-   margin-bottom: 140px;
-   white-space: normal;
-   font-size: 12px;
-}
-
-.whole th{
-    overflow-wrap:break-word;
+    word-break: break-word;
 }
 
 .final_total{
-height: 5%;
-margin-top: 160px;
-}
-
-table tbody tr:nth-child(odd), table tfoot tr:nth-child(odd){ 
-    background-color:#ec5a5a;
-}
-
-table tbody tr:nth-child(even), table tfoot tr:nth-child(even){
-    color:#585757; 
-    background-color:#E8E8E8;
-}
-
-table thead tr{
-    background-color: #FAF4D3;
-}
-
-.upper_table{
-    margin-bottom: 7%;
-}
-
-.checkbox{
-    width: 25px;
-    height: 15px;
-}
-
-.clear{
-    width: 250px;
-    font-size: 17px;
-    
-}
-
-select{
-    width:60%;
-    height: 30px;
-    text-align: center;
-    font-size: 17px;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-.imgButton button{
-    margin-left: 50%;
-    text-align:center;
-    width: 50px;
-}
-
-.dice_table tr{
-    background-color: #FFFFFF !important;
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-.dice_table td{
-    background-color: #FFFFFF !important;
-     border-style: hidden; 
-    padding: 5px 50px;
-}
-.dice_table {
-    border : 0;
-    border-bottom : 0;
-    background-color: #FFFFFF !important;
-    border-collapse: separate;
-    box-shadow : none;
-    margin-bottom: 50px;
-}
-
-#rollCount{
-    margin-left: 10%;
-}
-
-.dropSum{
-    max-width: 60px;
-}
-
-.lower_table select{
-    max-width: 50px
-}
-
-
-@media only screen and (min-width: 2500px){
-    .imgButton button{
-        margin-left: 55%;
-    }
-
+    width: 20vw;
+    height: 30vh;
 }
